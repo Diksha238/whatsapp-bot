@@ -1,30 +1,30 @@
-# WhatsApp Chatbot Backend – Internship Project
+# 💬 WhatsApp Chatbot Backend – Internship Project
 
-This is a Java Spring Boot-based backend project that simulates a WhatsApp chatbot. It handles user messages, provides automated replies using predefined logic, and stores all chat messages in Firebase Firestore.
+This is a **Java Spring Boot-based** backend project that implements a **WhatsApp-style chatbot**. It handles incoming user messages, responds using keyword-based logic, and stores all chat messages securely in **Firebase Firestore**.
 
 ---
 
 ## 🚀 Features
 
-- ✅ REST API endpoint to receive messages
-- ✅ Chatbot replies based on keyword logic
-- ✅ Firebase Firestore integration to store messages
-- ✅ Clean, modular code using Spring Boot structure
-- ✅ Ready for deployment (Render, Heroku, etc.)
+✅ REST API endpoint to receive user messages  
+✅ Auto-replies using keyword logic  
+✅ Firebase Firestore integration to store chat history  
+✅ Clean, modular Spring Boot code structure  
+✅ Ready for deployment (Render, Heroku, etc.)
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Java 17+**
-- **Spring Boot 3.x**
-- **Firebase Admin SDK**
-- **Maven**
-- **Postman (for testing)**
+- Java 17+
+- Spring Boot 3.x
+- Firebase Admin SDK
+- Maven
+- Postman (for testing)
 
 ---
 
-## 📦 Project Structure
+## 📁 Project Structure
 
 ```bash
 whatsapp-bot/
@@ -41,88 +41,96 @@ whatsapp-bot/
 │ │ └── FirebaseInitializer.java
 │ └── resources/
 │ ├── application.properties
-│ └── (firebase-config.json) ❌ not included in GitHub
-└── pom.xml
+│ └── firebase-config.json ❌ (not committed)
+├── pom.xml
 
 
 ```
 
 ---
 
-## 🔐 Firebase Config
+## 🔐 Firebase Setup
 
-To connect to Firebase:
+To connect the app with Firebase:
 
-1. Go to Firebase Console > Project Settings > Service Accounts
-2. Click **Generate New Private Key**
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Navigate to:  
+   **Project Settings** → **Service Accounts** → *Generate New Private Key*
 3. Download the `firebase-config.json`
-4. Place it in:
-   'src/main/resources/firebase-config.json'
-   
-5. ⚠️ **Never commit this file to GitHub** — it is ignored via `.gitignore`.
+4. Place the file in:
+   src/main/resources/firebase-config.json
+
+> ⚠️ **Important:** Never commit this file to GitHub — it is ignored via `.gitignore`.
 
 ---
 
 ## 📫 API Endpoint
 
-| Method | Endpoint                     | Description               |
-|--------|-------------------------------|---------------------------|
-| POST   | `/whatsapp/webhook`           | Receives a plain message  |
+| Method | Endpoint             | Description              |
+|--------|----------------------|--------------------------|
+| POST   | `/whatsapp/webhook`  | Receives a user message  |
 
-### 🔁 Example Request:
+### 🔁 Example Request
 
 **POST** `http://localhost:8080/whatsapp/webhook`  
-**Body (raw/text):**
+**Body** (raw / text):
 hi
 
-### ✅ Example Response:
+### ✅ Example Response
+
 "Hello! 👋 How can I assist you with navigation?"
 
 ---
 
-## 🧠 Sample Chatbot Logic
+## 🧠 Chatbot Logic
 
-The bot responds to:
-- `"hi"` → Hello! 👋
-- `"help"` → Shows options
-- `"directions"` → Asks for location
-- `"about"` → About the bot
-- anything else → Default fallback message
+The bot responds to the following messages:
 
----
-
-## ⚙️ How to Run
-
-1. Clone this repo:
-   https://github.com/Diksha238/whatsapp-bot
-2. Add your `firebase-config.json` to `src/main/resources/`
-3. Run the app:
-- In IntelliJ: run `WhatsAppBotApplication.java`
-- Or via terminal:
-  ```
-  mvn spring-boot:run
-  ```
+| Input        | Bot Reply                                 |
+|--------------|--------------------------------------------|
+| `hi`         | Hello! 👋                                  |
+| `help`       | Here’s how I can help you...              |
+| `directions` | Sure! Please share your location.         |
+| `about`      | I’m a Java-based WhatsApp-style chatbot.  |
+| *anything else* | Sorry, I didn’t understand that. 🤖    |
 
 ---
 
-## 🙋‍♀️ Author
+## ▶️ How to Run
 
-**Diksha**  
-Java Developer Intern  
-🌐 [GitHub Profile](https://github.com/Diksha238)
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Diksha238/whatsapp-bot.git
+   cd whatsapp-bot
+2. **Add Firebase configuration**
+```bash
+Download your firebase-config.json from Firebase Console
+Place it at: src/main/resources/firebase-config.json
+```
+3. **Build and run the app**
+```bash
+mvn spring-boot:run
+```
+4. **Test with Postman**
+```bash 
+Method: POST
+URL: http://localhost:8080/whatsapp/webhook
+Body: raw text (e.g., hi)
+```
+🙋‍♀️ Author
 
----
+Diksha
+Java Developer Intern
+🔗 GitHub Profile
+📫 [Email optionally here]
 
-## 📌 Status
+🔜 Coming Soon
 
-✅ Firebase initialized  
-✅ Webhook endpoint active  
-✅ Chatbot reply logic working  
-✅ Messages stored in Firestore  
-🔜 (Optional) Deploy to Render
+🌐 Deploy to Render
+🌟 Advanced NLP-based replies
+🧠 Chat history retrieval feature
+📃 License
 
----
+This project is open for educational and internship use only.
+© 2025 Diksha – All Rights Reserved.
 
-## 📃 License
-
-This project is open for educational/internship use only.
