@@ -117,20 +117,20 @@ Method: POST
 URL: http://localhost:8080/whatsapp/webhook
 Body: raw text (e.g., hi)
 ```
-🙋‍♀️ Author
+ ## 🙋‍♀️ Author
 
-Diksha
-Java Developer Intern
-🔗 GitHub Profile
-📫 [Email optionally here]
+**Diksha**
+**Java Developer Intern**
+🔗 https://github.com
+📫 dikshanagpal2005@gmail.com
 
-🔜 Coming Soon
+## 🔜 Coming Soon
 
-🌐 Deploy to Render
-🌟 Advanced NLP-based replies
-🧠 Chat history retrieval feature
-📃 License
+**🌐 Deploy to Render**
+**🌟 Advanced NLP-based replies**
+**🧠 Chat history retrieval feature**
+## 📃 License
 
-This project is open for educational and internship use only.
-© 2025 Diksha – All Rights Reserved.
+**This project is open for educational and internship use only.**
+**© 2025 Diksha – All Rights Reserved.**
 
